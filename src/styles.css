@@ -1,0 +1,235 @@
+:root {
+  --indigo: #2563eb;
+  --slate-700: #334155;
+  --slate-500: #64748b;
+  --green: #16a34a;
+  --red: #dc2626;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  background: #f8fafc;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.player-card {
+  width: min(100%, 200px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.6rem 0.4rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.player-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.player-card span {
+  font-size: 1rem;
+  color: var(--slate-700);
+  word-break: break-all;
+}
+
+.card {
+  background: #fff;
+  position: fixed;
+  width: min(100%, 560px);
+  padding: 2rem 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.5rem;
+  background: #e2e8f0;
+  object-fit: cover;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 0.35rem;
+}
+
+ul.list {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.92rem;
+}
+ul.list li {
+  margin: 0.35rem 0;
+  color: var(--slate-500);
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.75rem;
+  transition: transform 0.15s ease;
+  flex: 1;
+}
+button:active {
+  transform: scale(0.97);
+}
+.btn-primary {
+  background: var(--indigo);
+  color: #fff;
+}
+.btn-secondary {
+  background: #e2e8f0;
+  color: var(--slate-700);
+}
+button[disabled] {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 8rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.refresh-timer {
+  margin-top: 0.4rem;
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--slate-500);
+}
+.badge-online {
+  background: var(--green);
+}
+.badge-offline {
+  background: var(--red);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--slate-500);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+.spinner.white {
+  border-color: #fff;
+  border-top-color: transparent;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.gate-box {
+  width: 320px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.gate-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+.gate-btn {
+  width: 100%;
+  padding: 0.65rem 0;
+  font-weight: 600;
+  background: var(--indigo);
+  color: #fff;
+  border-radius: 0.65rem;
+}
+.gate-error {
+  color: var(--red);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+.github-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.github-btn:hover {
+  opacity: 1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: var(--slate-500);
+  text-align: center;
+}
+.footer a {
+  color: var(--indigo);
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
