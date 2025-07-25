@@ -13,6 +13,8 @@
 
 ## 사용 방법
 
+[위키](https://github.com/PIXELHIZE/Weirdhost-Minecraft-Status/wiki)에 접속하여 방법을 확인하세요.
+
 ## 기여 방법
 
 RP을 요청하시면 검토 후 병합해드립니다.
