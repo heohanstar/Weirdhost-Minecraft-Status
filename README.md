@@ -3,6 +3,8 @@
 <img style="width: 45%;" src="./src/assets/image2.png" />
 </div>
 
+# [LIVE DEMO(예시 사이트)](https://weirdhost-status.netlify.app/)
+
 # WeirdHost Status 페이지
 
 > [!CAUTION]
